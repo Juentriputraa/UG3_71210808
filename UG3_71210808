@@ -1,0 +1,17 @@
+kalimat = input("masukan kalimat: ")
+
+def hitung_kata(kalimat):
+    i_dict = {}
+    kata = kalimat.split()
+    for k in kata:
+        if k in i_dict:
+            i_dict[k] += 1
+        else:
+            i_dict[k] = 1
+    print("Jumlah kata:")
+    for k in i_dict:
+        print(k, "=", i_dict[k])
+    print("Total kata =", len(kata))
+    print("Kata unik =", len(i_dict))
+
+hitung_kata(kalimat)
